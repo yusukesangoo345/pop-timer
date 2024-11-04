@@ -1,0 +1,129 @@
+:root {
+    --background-color: #ffefef;
+    --button-color: #4caf50;
+    --button-hover-color: #45a049;
+    --text-color: #333;
+    --timer-color: #e91e63;
+    --header-color: #000; /* デフォルトのh1色 */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    flex-direction: column; /* 縦方向にレイアウトを変更 */
+}
+
+.container {
+    text-align: center;
+    width: 320px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: var(--header-color); /* h1色の設定 */
+}
+
+.timer-display {
+    font-size: 2em;
+    margin: 20px 0;
+    color: var(--timer-color);
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: 2px solid var(--timer-color);
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.preset-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+}
+
+.preset {
+    background-color: var(--button-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.preset:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    width: 30%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: var(--button-color);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--button-hover-color);
+    transform: scale(1.05);
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.theme-selector {
+    margin-top: 20px;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+/* ダークテーマのスタイル */
+body[data-theme='dark'] {
+    --background-color: #333;
+    --text-color: #fff;
+    --button-color: #555;
+    --button-hover-color: #666;
+    --timer-color: #ff4081;
+    --header-color: #000; /* ダークテーマのh1色を黒に設定 */
+}
+
+body[data-theme='colorful'] {
+    --background-color: #f0e68c;
+    --text-color: #000;
+    --button-color: #ff5722;
+    --button-hover-color: #e64a19;
+    --timer-color: #4caf50;
+    --header-color: #000; /* カラフルテーマのh1色を黒に設定 */
+}
