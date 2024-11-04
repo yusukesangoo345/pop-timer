@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポップタイマーアプリ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>⏱ ポップタイマー ⏱</h1>
+        <div class="timer-display" id="timerDisplay">00:00</div>
+        <input type="number" id="timeInput" placeholder="秒数を入力" min="1">
+        <div class="preset-buttons">
+            <button class="preset" data-time="30">30秒</button>
+            <button class="preset" data-time="60">1分</button>
+            <button class="preset" data-time="300">5分</button>
+        </div>
+        <div class="button-container">
+            <button id="startButton">スタート</button>
+            <button id="pauseButton" disabled>一時停止</button>
+            <button id="resetButton">リセット</button>
+        </div>
+        <div class="theme-selector">
+            <label for="themeSelect">テーマを選択:</label>
+            <select id="themeSelect">
+                <option value="default">デフォルト</option>
+                <option value="dark">ダーク</option>
+                <option value="colorful">カラフル</option>
+            </select>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 タイマーアプリ | すべての権利を保留します。</p>
+    </footer>
+    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
